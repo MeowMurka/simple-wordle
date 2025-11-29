@@ -128,9 +128,10 @@ resetBtn.addEventListener('click', ()=>{
   showMessage('');
 });
 
-const lastUpdate = new Date("%BUILD_DATE%"); // Render заменит ENV при сборке
+const lastUpdate = new Date("%BUILD_DATE%");
 const info = document.createElement("div");
 info.textContent = `Последнее изменение: ${lastUpdate.toLocaleString()}`;
 info.className = "last-update";
 document.body.appendChild(info);
+
 
