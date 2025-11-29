@@ -1,14 +1,15 @@
 FROM node:18-alpine
 WORKDIR /app
 
-# 1. Копируем package.json для npm install (кэшируем зависимости)
+# Копируем package.json для npm install
 COPY package*.json ./
 RUN npm install --omit=dev
 
-# 2. Копируем остальной фронтенд и сервер
-COPY . .
+# Копируем фронтенд в public
+COPY public ./public
 
-# 3. Генерируем lastUpdate.js
+# Генерируем lastUpdate.js в public
+COPY build-last-update.sh .
 RUN chmod +x build-last-update.sh && ./build-last-update.sh
 
 EXPOSE 10000
