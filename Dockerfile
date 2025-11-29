@@ -4,6 +4,9 @@ WORKDIR /app
 
 COPY package*.json ./
 
+ARG BUILD_DATE
+ENV BUILD_DATE=$BUILD_DATE
+
 RUN npm install --omit=dev
 
 COPY . .
