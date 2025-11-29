@@ -4,8 +4,8 @@ WORKDIR /app
 
 COPY package*.json ./
 
-ARG BUILD_DATE
-ENV BUILD_DATE=$BUILD_DATE
+COPY build-last-update.sh .
+RUN chmod +x build-last-update.sh && ./build-last-update.sh
 
 RUN npm install --omit=dev
 
