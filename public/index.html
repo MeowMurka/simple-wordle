@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wordle — Лабораторная 13</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Wordle — Лабораторная 13</h1>
+    <div id="timer">Время: 00:00</div>
+    <div id="board" class="board"></div>
+    <div id="controls" class="controls">
+      <input id="guessInput" maxlength="5" placeholder="Введите 5 букв" />
+      <button id="submitBtn">Отправить</button>
+      <button id="resetBtn">Сброс</button>
+    </div>
+    <div id="message" class="message"></div>
+    <div class="note">Слово хранится в коде (намеренно — по заданию).</div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
