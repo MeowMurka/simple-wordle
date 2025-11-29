@@ -131,10 +131,5 @@ resetBtn.addEventListener('click', ()=>{
 const lastUpdate = new Date("__BUILD_DATE__"); // заменяем через скрипт
 const info = document.createElement("div");
 info.textContent = `Последнее изменение: ${lastUpdate.toLocaleString()}`;
-info.style.position = "fixed";
-info.style.bottom = "10px";
-info.style.right = "10px";
-info.style.backgroundColor = "#eee";
-info.style.padding = "5px 10px";
-info.style.borderRadius = "5px";
+info.className = "last-update";
 document.body.appendChild(info);
