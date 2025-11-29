@@ -1,0 +1,4 @@
+- name: Set build date
+  run: |
+    BUILD_DATE=$(git log -1 --format=%cd --date=iso)
+    sed -i "s/__BUILD_DATE__/$BUILD_DATE/" ./script.js
